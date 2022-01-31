@@ -1,0 +1,120 @@
+.tableContainer {
+  width: 95%;
+  max-width: 1440px;
+  margin: 1.5rem auto;
+  background: var(--element-bg);
+  padding: 1rem;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  &_table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+
+    &_tableRowHeader {
+      background-color: transparent;
+      transition: all 0.25s ease;
+
+      &_tableHeader {
+        background-color: #f1f1f1;
+        padding: 15px 12px;
+        font-weight: 500;
+        text-align: left;
+        font-size: 12px;
+        color: #2c3e50;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    &_tableRowItems {
+      cursor: auto;
+      border-top: 1px solid var(--boder-color);
+
+      &_tableCell {
+        padding: 15px 12px;
+        font-size: 12px;
+        color: var(--input);
+      }
+    }
+  }
+
+  &_tableFooter {
+    border-top: 1px solid var(--boder-color);
+    padding: 20px 5px 8px;
+    width: 100%;
+    font-weight: 500;
+    text-align: left;
+    font-size: 16px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &_button {
+      border: none;
+      padding: 7px 14px;
+      cursor: pointer;
+      margin-right: 4px;
+      margin-left: 4px;
+      color: var(--button-text);
+      background: none;
+    }
+    
+    &_activeButton {
+      color: var(--text);
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    &_inactiveButton {
+      color: var(--text);
+      font-size: 11px;
+    }
+  }
+
+  &_noDataBg {
+    width: 100px;
+    margin: 75px auto;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 65px;
+      svg {
+        path {
+          color: rgba(0, 0, 0, 0.2) !important;
+        }
+      }
+    }
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tableContainer {
+    max-width: none;
+
+    &_tableBg {
+      overflow-x: scroll;
+    }
+
+    &_tableFooter {
+      justify-content: flex-start;
+    }
+  }
+}
