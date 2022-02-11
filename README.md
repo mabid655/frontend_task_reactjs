@@ -1,4 +1,4 @@
-# FRIDAY | FRONTEND TASK
+# FRONTEND TASK
 
 
 ## Prerequisites
